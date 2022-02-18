@@ -1,0 +1,123 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.header_visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: darkolivegreen;
+    background: linear-gradient(135deg, #999966 0%, #556b2f 48%, #333300 100%);
+    background-size: cover;  
+}
+
+.player__video {
+    max-width: 750px;
+    position: relative;
+    overflow: hidden;
+}
+
+.video {
+    width: 100%;
+    cursor: pointer;
+}
+
+.player__controls {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%) translateY(-5px);
+    transition: 0.3s;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.3);
+}
+ 
+.player__video:hover .player__controls {
+    transform: translateY(0);
+}
+
+.player__button {
+    width: 10%;
+    border: none;
+    background: khaki;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.player__button:focus {
+    outline: none;
+}
+
+.time {
+    font-size: 1em;
+    color: white;
+    width: 20%;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    background: transparent;
+    margin: 0;
+    width: 20%;
+    padding: 0 10px;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: black;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+    background: darkorange;
+    cursor: pointer;
+}
+
+.progress {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 5px;
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.progress__filled {
+    width: 0;
+    background: darkorange;
+}
+
+.player__video:hover .progress {
+    height: 20px;
+}
