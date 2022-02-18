@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
+    <link rel="shortcut icon" href="./assets/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="header_visually-hidden">Custom Video Player</h1>
+    </header>
+    <main class="container">
+        <div class="player__video">
+            <video class="video" src="./assets/video/video1.mp4" preload loop poster="./assets/img/img1.jpg"></video>
+            <div class="player__controls">
+                <div class="progress">
+                    <div class="progress__filled"></div>
+                </div>
+                <button id="play-toggle" class="player__button">
+                    <img src="./assets/icons/play.png" alt="play" class="icon__play">
+                </button>
+                <input class="sound" type="range" min="0" max="1" step="0.01" value="0.5">
+                <input class="playbackRate" type="range" min="0.5" max="2" step="0.1" value="1">
+                <button data-skip="-5" class="player__button">
+                    <img src="./assets/icons/back.png" alt="back">
+                </button>
+                <button data-skip="5" class="player__button">
+                    <img src="./assets/icons/forward.png" alt="forward">
+                </button>
+                <div class="time">
+                    <span class="current">0:00</span>/<span class="duration">0:00</span>
+                </div>
+                <button id="fullscreen" class="player__button">
+                    <img src="./assets/icons/fullscreen.png" alt="fullscreen">
+                </button>
+            </div>
+        </div>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>
